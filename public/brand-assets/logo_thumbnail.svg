@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
-    <title>woot-log</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="woot-log" fill-rule="nonzero">
-            <circle id="Oval" fill="#47A7F6" cx="256" cy="256" r="256"></circle>
-            <path d="M362.807947,368.807947 L244.122956,368.807947 C178.699407,368.807947 125.456954,315.561812 125.456954,250.12177 C125.456954,184.703089 178.699407,131.456954 244.124143,131.456954 C309.565494,131.456954 362.807947,184.703089 362.807947,250.12177 L362.807947,368.807947 Z" id="Fill-1" stroke="#FFFFFF" stroke-width="6" fill="#FFFFFF"></path>
-        </g>
-    </g>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g>
+	<circle fill="#FFFFFF" cx="512" cy="512" r="512"/>
+	<path id="Shape" fill="#00CA72" d="M178.699,773.693c-39.152-0.045-75.201-21.126-94.143-55.048   c-18.954-33.92-17.821-75.359,2.956-108.193l193.877-306.509c19.917-33.378,56.543-53.417,95.683-52.354   c39.129,1.064,74.589,23.063,92.637,57.471c18.037,34.396,15.794,75.789-5.842,108.091L270.113,723.628   C250.401,754.832,215.846,773.738,178.699,773.693z"/>
+	<path id="Shape_1_" fill="#FB275D" d="M512.732,773.693c-39.141-0.045-75.189-21.126-94.142-55.048   c-18.942-33.92-17.81-75.359,2.966-108.193L615.39,303.943c19.609-33.944,56.429-54.516,95.919-53.611   c39.492,0.907,75.314,23.143,93.339,57.936c18.024,34.804,15.398,76.593-6.929,108.883L603.932,723.628   C584.254,754.765,549.812,773.671,512.732,773.693z"/>
+	<path id="Oval" fill="#FFCC00" d="M846.721,565.301c59.554,0,107.832,46.646,107.832,104.185   c0,57.538-48.278,104.208-107.832,104.208S738.89,727.023,738.89,669.485C738.89,611.946,787.167,565.301,846.721,565.301z"/>
+</g>
 </svg>
