@@ -69,7 +69,7 @@ describe('#URL Helpers', () => {
 
   describe('isValidURL', () => {
     it('should return true if valid url is passed', () => {
-      expect(isValidURL('https://chatwoot.com')).toBe(true);
+      expect(isValidURL('https://monday.com.vn')).toBe(true);
     });
     it('should return false if invalid url is passed', () => {
       expect(isValidURL('alert.window')).toBe(false);

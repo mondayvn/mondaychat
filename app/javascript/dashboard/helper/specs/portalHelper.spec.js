@@ -4,11 +4,11 @@ describe('PortalHelper', () => {
   describe('buildPortalURL', () => {
     it('returns the correct url', () => {
       window.chatwootConfig = {
-        hostURL: 'https://app.chatwoot.com',
-        helpCenterURL: 'https://help.chatwoot.com',
+        hostURL: 'https://app.monday.com.vn',
+        helpCenterURL: 'https://help.monday.com.vn',
       };
       expect(buildPortalURL('handbook')).toEqual(
-        'https://help.chatwoot.com/hc/handbook'
+        'https://help.monday.com.vn/hc/handbook'
       );
       window.chatwootConfig = {};
     });
@@ -17,12 +17,12 @@ describe('PortalHelper', () => {
   describe('buildPortalArticleURL', () => {
     it('returns the correct url', () => {
       window.chatwootConfig = {
-        hostURL: 'https://app.chatwoot.com',
-        helpCenterURL: 'https://help.chatwoot.com',
+        hostURL: 'https://app.monday.com.vn',
+        helpCenterURL: 'https://help.monday.com.vn',
       };
       expect(
         buildPortalArticleURL('handbook', 'culture', 'fr', 'article-slug')
-      ).toEqual('https://help.chatwoot.com/hc/handbook/articles/article-slug');
+      ).toEqual('https://help.monday.com.vn/hc/handbook/articles/article-slug');
       window.chatwootConfig = {};
     });
   });

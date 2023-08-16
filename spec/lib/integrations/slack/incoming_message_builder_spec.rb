@@ -69,7 +69,7 @@ describe Integrations::Slack::IncomingMessageBuilder do
         allow(builder).to receive(:sender).and_return(nil)
         builder.perform
         expect(conversation.messages.count).to eql(messages_count + 1)
-        expect(conversation.messages.last.content).to eql('this is test https://chatwoot.com Hey @Sojan Test again')
+        expect(conversation.messages.last.content).to eql('this is test https://monday.com.vn Hey @Sojan Test again')
       end
 
       it 'creates a private note' do
@@ -129,7 +129,7 @@ describe Integrations::Slack::IncomingMessageBuilder do
         allow(builder).to receive(:sender).and_return(nil)
         builder.perform
         expect(conversation.messages.count).to eql(messages_count + 1)
-        expect(conversation.messages.last.content).to eql('this is test https://chatwoot.com Hey @Sojan Test again')
+        expect(conversation.messages.last.content).to eql('this is test https://monday.com.vn Hey @Sojan Test again')
         expect(conversation.messages.last.attachments).to be_any
       end
 

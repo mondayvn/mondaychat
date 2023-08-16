@@ -3,13 +3,13 @@ info:
   description: This is the API documentation for Chatwoot server.
   version: 1.0.0
   title: Chatwoot
-  termsOfService:	https://www.chatwoot.com/terms-of-service/
+  termsOfService:	https://www.monday.com.vn/terms-of-service/
   contact:
-    email: hello@chatwoot.com
+    email: hello@monday.com.vn
   license:
     name: MIT License
     url: https://opensource.org/licenses/MIT
-host: app.chatwoot.com
+host: app.monday.com.vn
 basePath: /
 schemes:
   - https
