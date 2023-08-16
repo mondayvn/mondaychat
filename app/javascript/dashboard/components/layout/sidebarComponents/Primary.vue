@@ -96,7 +96,7 @@ export default {
       this.$emit('toggle-accounts');
     },
     toggleSupportChatWindow() {
-      window.$chatwoot.toggle();
+      window.$mondaychat.toggle();
     },
     openNotificationPanel() {
       this.$emit('open-notification-panel');

@@ -34,7 +34,7 @@ PortalListItemView.args = {
   selectedLocaleCode: 'en-US',
   portals: [
     {
-      name: 'Chatwoot Help Center',
+      name: 'Mondaychat Help Center',
       id: 1,
       color: 'red',
       custom_domain: 'help-center.monday.com.vn',
@@ -100,7 +100,7 @@ PortalListItemView.args = {
       ],
     },
     {
-      name: 'Chatwoot Docs',
+      name: 'Mondaychat Docs',
       id: 2,
       color: 'green',
       custom_domain: 'doc-monday.com.vn',

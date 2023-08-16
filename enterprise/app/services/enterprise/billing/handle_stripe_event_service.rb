@@ -72,12 +72,12 @@ class Enterprise::Billing::HandleStripeEventService
   end
 
   def find_plan(plan_id)
-    installation_config = InstallationConfig.find_by(name: 'CHATWOOT_CLOUD_PLANS')
+    installation_config = InstallationConfig.find_by(name: 'MONDAYCHAT_CLOUD_PLANS')
     installation_config.value.find { |config| config['product_id'].include?(plan_id) }
   end
 
   def default_plan?
-    installation_config = InstallationConfig.find_by(name: 'CHATWOOT_CLOUD_PLANS')
+    installation_config = InstallationConfig.find_by(name: 'MONDAYCHAT_CLOUD_PLANS')
     default_plan = installation_config.value.first
     @account.custom_attributes['plan_name'] == default_plan['name']
   end

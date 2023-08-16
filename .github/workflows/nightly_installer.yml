@@ -2,7 +2,7 @@
 # #
 # # Linux nightly installer action
 # # This action will try to install and setup
-# # chatwoot on an Ubuntu 20.04 machine using
+# # mondaychat on an Ubuntu 20.04 machine using
 # # the linux installer script.
 # # 
 # # This is set to run daily at midnight.
@@ -21,7 +21,7 @@ jobs:
 
     - name: get installer
       run: |
-        wget https://get.chatwoot.app/linux/install.sh
+        wget https://get.mondaychat.app/linux/install.sh
         chmod +x install.sh
         #fix for postgtres not starting automatically in gh action env
         sed -i '/function configure_db() {/a sudo service postgresql start' install.sh
@@ -41,12 +41,12 @@ jobs:
         #      if: always()
         #      run: |
         #        sudo netstat -ntlp | grep 3000
-        #        sudo systemctl restart chatwoot.target
+        #        sudo systemctl restart mondaychat.target
         #        curl http://localhost:3000/api
 
-    - name: Upload chatwoot setup log file as an artifact
+    - name: Upload mondaychat setup log file as an artifact
       uses: actions/upload-artifact@v3
       if: always()
       with:
-        name: chatwoot-setup-log-file
-        path: /var/log/chatwoot-setup.log
+        name: mondaychat-setup-log-file
+        path: /var/log/mondaychat-setup.log

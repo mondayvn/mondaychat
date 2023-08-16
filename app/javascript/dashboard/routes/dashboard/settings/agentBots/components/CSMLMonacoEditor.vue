@@ -38,11 +38,11 @@ export default {
     window.onmessage = e => {
       if (
         typeof e.data !== 'string' ||
-        !e.data.startsWith('chatwoot-csml-editor:update')
+        !e.data.startsWith('mondaychat-csml-editor:update')
       ) {
         return;
       }
-      const csmlContent = e.data.replace('chatwoot-csml-editor:update', '');
+      const csmlContent = e.data.replace('mondaychat-csml-editor:update', '');
       this.$emit('input', csmlContent);
     };
   },

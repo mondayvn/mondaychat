@@ -42,9 +42,9 @@ class Instagram::MessageText < Instagram::WebhooksBaseService
       result = k.get_object(ig_scope_id) || {}
     rescue Koala::Facebook::AuthenticationError => e
       @inbox.channel.authorization_error!
-      ChatwootExceptionTracker.new(e, account: @inbox.account).capture_exception
+      MondaychatExceptionTracker.new(e, account: @inbox.account).capture_exception
     rescue StandardError, Koala::Facebook::ClientError => e
-      ChatwootExceptionTracker.new(e, account: @inbox.account).capture_exception
+      MondaychatExceptionTracker.new(e, account: @inbox.account).capture_exception
     end
 
     find_or_create_contact(result) if defined?(result) && result.present?

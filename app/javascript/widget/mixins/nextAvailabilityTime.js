@@ -17,7 +17,7 @@ export default {
   },
   computed: {
     channelConfig() {
-      return window.chatwootWebChannel;
+      return window.mondaychatWebChannel;
     },
     workingHours() {
       return this.channelConfig.workingHours;
@@ -43,7 +43,7 @@ export default {
       return this.channelConfig.timezone;
     },
     languageCode() {
-      return window.chatwootWebChannel.locale;
+      return window.mondaychatWebChannel.locale;
     },
     currentDayWorkingHours() {
       return this.workingHours.find(

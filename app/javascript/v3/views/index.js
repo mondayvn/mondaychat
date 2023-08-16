@@ -13,7 +13,7 @@ export const initalizeRouter = () => {
       name: to.name,
     });
 
-    return validateRouteAccess(to, next, window.chatwootConfig);
+    return validateRouteAccess(to, next, window.mondaychatConfig);
   });
 };
 

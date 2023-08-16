@@ -68,7 +68,7 @@ class Facebook::SendOnFacebookService < Base::SendOnChannelService
     if exception.to_s.include?('The session has been invalidated') || exception.to_s.include?('Error validating access token')
       channel.authorization_error!
     else
-      ChatwootExceptionTracker.new(exception, account: message.account, user: message.sender).capture_exception
+      MondaychatExceptionTracker.new(exception, account: message.account, user: message.sender).capture_exception
     end
   end
 end

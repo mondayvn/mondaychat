@@ -1,5 +1,5 @@
 export const buildPortalURL = portalSlug => {
-  const { hostURL, helpCenterURL } = window.chatwootConfig;
+  const { hostURL, helpCenterURL } = window.mondaychatConfig;
   const baseURL = helpCenterURL || hostURL || '';
   return `${baseURL}/hc/${portalSlug}`;
 };

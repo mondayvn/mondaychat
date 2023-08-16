@@ -11,7 +11,7 @@ class Microsoft::CallbacksController < ApplicationController
     ::Redis::Alfred.delete(users_data['email'].downcase)
     redirect_to app_microsoft_inbox_agents_url(account_id: account.id, inbox_id: inbox.id)
   rescue StandardError => e
-    ChatwootExceptionTracker.new(e).capture_exception
+    MondaychatExceptionTracker.new(e).capture_exception
     redirect_to '/'
   end
 

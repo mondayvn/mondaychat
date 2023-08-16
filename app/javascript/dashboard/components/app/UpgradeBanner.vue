@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      isOnChatwootCloud: 'globalConfig/isOnChatwootCloud',
+      isOnMondaychatCloud: 'globalConfig/isOnMondaychatCloud',
       getAccount: 'accounts/getAccount',
     }),
     bannerMessage() {
@@ -34,7 +34,7 @@ export default {
       return this.$t('GENERAL_SETTINGS.OPEN_BILLING');
     },
     shouldShowBanner() {
-      if (!this.isOnChatwootCloud) {
+      if (!this.isOnMondaychatCloud) {
         return false;
       }
 
@@ -46,7 +46,7 @@ export default {
     },
   },
   mounted() {
-    if (this.isOnChatwootCloud) {
+    if (this.isOnMondaychatCloud) {
       this.fetchLimits();
     }
   },

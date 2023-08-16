@@ -1,5 +1,5 @@
 # Variables
-APP_NAME := chatwoot
+APP_NAME := mondaychat
 RAILS_ENV ?= development
 
 # Targets
@@ -18,7 +18,7 @@ db_seed:
 	RAILS_ENV=$(RAILS_ENV) bundle exec rails db:seed
 
 db:
-	RAILS_ENV=$(RAILS_ENV) bundle exec rails db:chatwoot_prepare
+	RAILS_ENV=$(RAILS_ENV) bundle exec rails db:mondaychat_prepare
 
 console:
 	RAILS_ENV=$(RAILS_ENV) bundle exec rails console

@@ -90,7 +90,7 @@ RSpec.describe 'Api::V1::Accounts::Portals', type: :request do
           portal: {
             name: 'test_portal',
             slug: 'test_kbase',
-            custom_domain: 'https://support.chatwoot.dev'
+            custom_domain: 'https://support.mondaychat.dev'
           }
         }
         post "/api/v1/accounts/#{account.id}/portals",
@@ -100,7 +100,7 @@ RSpec.describe 'Api::V1::Accounts::Portals', type: :request do
         expect(response).to have_http_status(:success)
         json_response = response.parsed_body
         expect(json_response['name']).to eql('test_portal')
-        expect(json_response['custom_domain']).to eql('support.chatwoot.dev')
+        expect(json_response['custom_domain']).to eql('support.mondaychat.dev')
       end
     end
   end

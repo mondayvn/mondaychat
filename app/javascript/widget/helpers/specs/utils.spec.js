@@ -12,7 +12,7 @@ describe('#IFrameHelper', () => {
       expect(
         IFrameHelper.isAValidEvent({
           data:
-            'chatwoot-widget:{"event":"config-set","locale":"fr","position":"left","hideMessageBubble":false,"showPopoutButton":true}',
+            'mondaychat-widget:{"event":"config-set","locale":"fr","position":"left","hideMessageBubble":false,"showPopoutButton":true}',
         })
       ).toEqual(true);
       expect(
@@ -28,7 +28,7 @@ describe('#IFrameHelper', () => {
       expect(
         IFrameHelper.getMessage({
           data:
-            'chatwoot-widget:{"event":"config-set","locale":"fr","position":"left","hideMessageBubble":false,"showPopoutButton":true}',
+            'mondaychat-widget:{"event":"config-set","locale":"fr","position":"left","hideMessageBubble":false,"showPopoutButton":true}',
         })
       ).toEqual({
         event: 'config-set',

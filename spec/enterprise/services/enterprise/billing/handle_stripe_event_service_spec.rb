@@ -20,7 +20,7 @@ describe Enterprise::Billing::HandleStripeEventService do
     allow(subscription).to receive(:[]).with('current_period_end').and_return(1_686_567_520)
     allow(subscription).to receive(:customer).and_return('cus_123')
     create(:installation_config, {
-             name: 'CHATWOOT_CLOUD_PLANS',
+             name: 'MONDAYCHAT_CLOUD_PLANS',
              value: [
                {
                  'name' => 'Hacker',

@@ -46,7 +46,7 @@ describe Facebook::SendOnFacebookService do
     end
 
     context 'with reply' do
-      it 'if message is sent from chatwoot and is outgoing' do
+      it 'if message is sent from mondaychat and is outgoing' do
         message = create(:message, message_type: 'outgoing', inbox: facebook_inbox, account: account, conversation: conversation)
         described_class.new(message: message).perform
         expect(bot).to have_received(:deliver)
@@ -60,7 +60,7 @@ describe Facebook::SendOnFacebookService do
         expect(facebook_channel.authorization_error_count).to eq(1)
       end
 
-      it 'if message with attachment is sent from chatwoot and is outgoing' do
+      it 'if message with attachment is sent from mondaychat and is outgoing' do
         message = build(:message, message_type: 'outgoing', inbox: facebook_inbox, account: account, conversation: conversation)
         attachment = message.attachments.new(account_id: message.account_id, file_type: :image)
         attachment.file.attach(io: Rails.root.join('spec/assets/avatar.png').open, filename: 'avatar.png', content_type: 'image/png')

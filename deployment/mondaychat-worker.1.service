@@ -1,11 +1,11 @@
 [Unit]
 Requires=network.target
-PartOf=chatwoot.target
+PartOf=mondaychat.target
 
 [Service]
 Type=simple
-User=chatwoot
-WorkingDirectory=/home/chatwoot/chatwoot
+User=mondaychat
+WorkingDirectory=/home/mondaychat/mondaychat
 
 ExecStart=/bin/bash -lc 'dotenv bundle exec sidekiq -C config/sidekiq.yml'
 
@@ -16,10 +16,10 @@ KillMode=mixed
 StandardInput=null
 SyslogIdentifier=%p
 
-Environment="PATH=/home/chatwoot/.rvm/gems/ruby-3.2.2/bin:/home/chatwoot/.rvm/gems/ruby-3.2.2@global/bin:/home/chatwoot/.rvm/rubies/ruby-3.2.2/bin:/home/chatwoot/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/chatwoot/.rvm/bin:/home/chatwoot/.rvm/bin"
+Environment="PATH=/home/mondaychat/.rvm/gems/ruby-3.2.2/bin:/home/mondaychat/.rvm/gems/ruby-3.2.2@global/bin:/home/mondaychat/.rvm/rubies/ruby-3.2.2/bin:/home/mondaychat/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/home/mondaychat/.rvm/bin:/home/mondaychat/.rvm/bin"
 Environment="PORT=3000"
 Environment="RAILS_ENV=production"
 Environment="NODE_ENV=production"
 Environment="RAILS_LOG_TO_STDOUT=true"
-Environment="GEM_HOME=/home/chatwoot/.rvm/gems/ruby-3.2.2"
-Environment="GEM_PATH=/home/chatwoot/.rvm/gems/ruby-3.2.2:/home/chatwoot/.rvm/gems/ruby-3.2.2@global"
+Environment="GEM_HOME=/home/mondaychat/.rvm/gems/ruby-3.2.2"
+Environment="GEM_PATH=/home/mondaychat/.rvm/gems/ruby-3.2.2:/home/mondaychat/.rvm/gems/ruby-3.2.2@global"

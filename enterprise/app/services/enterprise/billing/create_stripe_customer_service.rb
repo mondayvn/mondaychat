@@ -42,7 +42,7 @@ class Enterprise::Billing::CreateStripeCustomerService
   end
 
   def default_plan
-    installation_config = InstallationConfig.find_by(name: 'CHATWOOT_CLOUD_PLANS')
+    installation_config = InstallationConfig.find_by(name: 'MONDAYCHAT_CLOUD_PLANS')
     @default_plan ||= installation_config.value.first
   end
 

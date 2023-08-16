@@ -1,4 +1,4 @@
-json.chatwoot_website_channel do
+json.mondaychat_website_channel do
   json.avatar_url @web_widget.inbox.avatar_url
   json.has_a_connected_agent_bot @web_widget.inbox.agent_bot&.name
   json.locale @web_widget.account.locale
@@ -19,7 +19,7 @@ json.chatwoot_website_channel do
   json.utc_off_set ActiveSupport::TimeZone[@web_widget.inbox.timezone].now.formatted_offset
 end
 # Remove the following defaults by June 2023 as it would be covered by the feature flags
-json.chatwoot_widget_defaults do
+json.mondaychat_widget_defaults do
   json.use_inbox_avatar_for_bot @web_widget.use_inbox_avatar_for_bot
 end
 json.contact do

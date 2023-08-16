@@ -9,7 +9,7 @@ describe Instagram::SendOnInstagramService do
   end
 
   let!(:account) { create(:account) }
-  let!(:instagram_channel) { create(:channel_instagram_fb_page, account: account, instagram_id: 'chatwoot-app-user-id-1') }
+  let!(:instagram_channel) { create(:channel_instagram_fb_page, account: account, instagram_id: 'mondaychat-app-user-id-1') }
   let!(:instagram_inbox) { create(:inbox, channel: instagram_channel, account: account, greeting_enabled: false) }
   let!(:contact) { create(:contact, account: account) }
   let(:contact_inbox) { create(:contact_inbox, contact: contact, inbox: instagram_inbox) }
@@ -32,7 +32,7 @@ describe Instagram::SendOnInstagramService do
           InstallationConfig.where(name: 'ENABLE_MESSENGER_CHANNEL_HUMAN_AGENT').first_or_create(value: false)
         end
 
-        it 'if message is sent from chatwoot and is outgoing' do
+        it 'if message is sent from mondaychat and is outgoing' do
           message = create(:message, message_type: 'outgoing', inbox: instagram_inbox, account: account, conversation: conversation)
 
           allow(HTTParty).to receive(:post).with(
@@ -53,7 +53,7 @@ describe Instagram::SendOnInstagramService do
           expect(response).to eq({  message_id: 'anyrandommessageid1234567890' })
         end
 
-        it 'if message with attachment is sent from chatwoot and is outgoing' do
+        it 'if message with attachment is sent from mondaychat and is outgoing' do
           message = build(:message, message_type: 'outgoing', inbox: instagram_inbox, account: account, conversation: conversation)
           attachment = message.attachments.new(account_id: message.account_id, file_type: :image)
           attachment.file.attach(io: Rails.root.join('spec/assets/avatar.png').open, filename: 'avatar.png', content_type: 'image/png')
@@ -69,7 +69,7 @@ describe Instagram::SendOnInstagramService do
           InstallationConfig.where(name: 'ENABLE_MESSENGER_CHANNEL_HUMAN_AGENT').first_or_create(value: true)
         end
 
-        it 'if message is sent from chatwoot and is outgoing' do
+        it 'if message is sent from mondaychat and is outgoing' do
           message = create(:message, message_type: 'outgoing', inbox: instagram_inbox, account: account, conversation: conversation)
 
           allow(HTTParty).to receive(:post).with(

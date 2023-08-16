@@ -81,7 +81,7 @@ class Messages::Messenger::MessageBuilder
     Rails.logger.error e
     {}
   rescue StandardError => e
-    ChatwootExceptionTracker.new(e, account: @inbox.account).capture_exception
+    MondaychatExceptionTracker.new(e, account: @inbox.account).capture_exception
     {}
   end
 

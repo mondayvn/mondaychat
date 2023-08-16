@@ -136,7 +136,7 @@ RSpec.describe 'Enterprise Billing APIs', type: :request do
           create(:conversation, account: account)
           create(:channel_api, account: account)
           InstallationConfig.where(name: 'DEPLOYMENT_ENV').first_or_create(value: 'cloud')
-          InstallationConfig.where(name: 'CHATWOOT_CLOUD_PLANS').first_or_create(value: [{ 'name': 'Hacker' }])
+          InstallationConfig.where(name: 'MONDAYCHAT_CLOUD_PLANS').first_or_create(value: [{ 'name': 'Hacker' }])
         end
 
         it 'returns the limits if the plan is default' do

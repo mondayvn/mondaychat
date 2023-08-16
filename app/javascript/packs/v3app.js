@@ -7,7 +7,7 @@ import * as Sentry from '@sentry/vue';
 import { Integrations } from '@sentry/tracing';
 import {
   initializeAnalyticsEvents,
-  initializeChatwootEvents,
+  initializeMondaychatEvents,
 } from 'dashboard/helper/scriptHelpers';
 import AnalyticsPlugin from 'dashboard/helper/AnalyticsHelper/plugin';
 import App from '../v3/App.vue';
@@ -47,7 +47,7 @@ Vue.component('fluent-icon', FluentIcon);
 const i18nConfig = new VueI18n({ locale: 'en', messages: i18n });
 
 window.bus = new Vue();
-initializeChatwootEvents();
+initializeMondaychatEvents();
 initializeAnalyticsEvents();
 initalizeRouter();
 window.onload = () => {

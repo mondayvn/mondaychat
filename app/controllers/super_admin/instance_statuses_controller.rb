@@ -1,25 +1,25 @@
 class SuperAdmin::InstanceStatusesController < SuperAdmin::ApplicationController
   def show
     @metrics = {}
-    chatwoot_version
+    mondaychat_version
     sha
     postgres_status
     redis_metrics
-    chatwoot_edition
+    mondaychat_edition
   end
 
-  def chatwoot_edition
-    @metrics['Chatwoot edition'] = if ChatwootApp.enterprise?
+  def mondaychat_edition
+    @metrics['Mondaychat edition'] = if MondaychatApp.enterprise?
                                      'Enterprise'
-                                   elsif ChatwootApp.custom?
+                                   elsif MondaychatApp.custom?
                                      'Custom'
                                    else
                                      'Community'
                                    end
   end
 
-  def chatwoot_version
-    @metrics['Chatwoot version'] = Chatwoot.config[:version]
+  def mondaychat_version
+    @metrics['Mondaychat version'] = Mondaychat.config[:version]
   end
 
   def sha

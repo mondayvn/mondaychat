@@ -4,11 +4,11 @@
     "HEADER_BTN_TXT": "Dodaj dziennik audytowy",
     "LOADING": "Pobieranie dzienników audytowych",
     "SEARCH_404": "Brak elementów pasujących do tego zapytania",
-    "SIDEBAR_TXT": "<p><b>Dzienniki audytowe</b> </p><p>Dzienniki audytowe to ślady zdarzeń i działań w systemie Chatwoot.</p>",
+    "SIDEBAR_TXT": "<p><b>Dzienniki audytowe</b> </p><p>Dzienniki audytowe to ślady zdarzeń i działań w systemie Mondaychat.</p>",
     "LIST": {
       "404": "Brak dostępnych dzienników audytowych w tym koncie.",
       "TITLE": "Zarządzaj dziennikami audytowymi",
-      "DESC": "Dziennik audytu zawiera ślady zdarzeń i akcji w systemie Chatwoot.",
+      "DESC": "Dziennik audytu zawiera ślady zdarzeń i akcji w systemie Mondaychat.",
       "TABLE_HEADER": [
         "Użytkownik",
         "Akcja",

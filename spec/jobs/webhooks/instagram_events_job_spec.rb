@@ -15,10 +15,10 @@ describe Webhooks::InstagramEventsJob do
     { name: 'Jane',
       id: 'Sender-id-1',
       account_id: instagram_inbox.account_id,
-      profile_pic: 'https://chatwoot-assets.local/sample.png',
+      profile_pic: 'https://mondaychat-assets.local/sample.png',
       username: 'some_user_name' }
   end
-  let!(:instagram_channel) { create(:channel_instagram_fb_page, account: account, instagram_id: 'chatwoot-app-user-id-1') }
+  let!(:instagram_channel) { create(:channel_instagram_fb_page, account: account, instagram_id: 'mondaychat-app-user-id-1') }
   let!(:instagram_inbox) { create(:inbox, channel: instagram_channel, account: account, greeting_enabled: false) }
   let!(:dm_params) { build(:instagram_message_create_event).with_indifferent_access }
   let!(:standby_params) { build(:instagram_message_standby_event).with_indifferent_access }
@@ -87,7 +87,7 @@ describe Webhooks::InstagramEventsJob do
             name: 'Jane',
             id: 'Sender-id-1',
             account_id: instagram_inbox.account_id,
-            profile_pic: 'https://chatwoot-assets.local/sample.png'
+            profile_pic: 'https://mondaychat-assets.local/sample.png'
           }.with_indifferent_access
         )
         expect(instagram_inbox.messages.count).to be 1

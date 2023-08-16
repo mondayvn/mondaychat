@@ -56,20 +56,20 @@ jobs:
 
       - restore_cache:
           keys:
-            - chatwoot-bundle-{{ .Environment.CACHE_VERSION }}-v20220524-{{ checksum "Gemfile.lock" }}
+            - mondaychat-bundle-{{ .Environment.CACHE_VERSION }}-v20220524-{{ checksum "Gemfile.lock" }}
 
       - run: bundle install --frozen --path ~/.bundle
       - save_cache:
           paths:
             - ~/.bundle
-          key: chatwoot-bundle-{{ .Environment.CACHE_VERSION }}-v20220524-{{ checksum "Gemfile.lock" }}
+          key: mondaychat-bundle-{{ .Environment.CACHE_VERSION }}-v20220524-{{ checksum "Gemfile.lock" }}
 
 
       # Only necessary if app uses webpacker or yarn in some other way
       - restore_cache:
           keys:
-            - chatwoot-yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
-            - chatwoot-yarn-
+            - mondaychat-yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+            - mondaychat-yarn-
 
       - run:
           name: yarn
@@ -77,7 +77,7 @@ jobs:
 
       # Store yarn / webpacker cache
       - save_cache:
-          key: chatwoot-yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
+          key: mondaychat-yarn-{{ .Environment.CACHE_VERSION }}-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
 

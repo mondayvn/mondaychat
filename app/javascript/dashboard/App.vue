@@ -6,7 +6,7 @@
     :class="{ 'app-rtl--wrapper': isRTLView }"
     :dir="isRTLView ? 'rtl' : 'ltr'"
   >
-    <update-banner :latest-chatwoot-version="latestChatwootVersion" />
+    <update-banner :latest-mondaychat-version="latestMondaychatVersion" />
     <template v-if="!accountUIFlags.isFetchingItem && currentAccountId">
       <payment-pending-banner />
       <upgrade-banner />
@@ -59,7 +59,7 @@ export default {
   data() {
     return {
       showAddAccountModal: false,
-      latestChatwootVersion: null,
+      latestMondaychatVersion: null,
     };
   },
 
@@ -93,7 +93,7 @@ export default {
   mounted() {
     this.initializeColorTheme();
     this.listenToThemeChanges();
-    this.setLocale(window.chatwootConfig.selectedLocale);
+    this.setLocale(window.mondaychatConfig.selectedLocale);
   },
   methods: {
     initializeColorTheme() {
@@ -113,12 +113,12 @@ export default {
       });
       const {
         locale,
-        latest_chatwoot_version: latestChatwootVersion,
+        latest_mondaychat_version: latestMondaychatVersion,
       } = this.getAccount(this.currentAccountId);
       const { pubsub_token: pubsubToken } = this.currentUser || {};
       this.setLocale(locale);
       this.updateRTLDirectionView(locale);
-      this.latestChatwootVersion = latestChatwootVersion;
+      this.latestMondaychatVersion = latestMondaychatVersion;
       vueActionCable.init(pubsubToken);
 
       verifyServiceWorkerExistence(registration =>

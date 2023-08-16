@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe ChatwootHub do
+describe MondaychatHub do
   it 'generates installation identifier' do
     installation_identifier = described_class.installation_identifier
     expect(installation_identifier).not_to be_nil
@@ -8,7 +8,7 @@ describe ChatwootHub do
   end
 
   context 'when fetching latest_version' do
-    it 'get latest version from chatwoot hub' do
+    it 'get latest version from mondaychat hub' do
       version = '1.1.1'
       allow(RestClient).to receive(:post).and_return({ version: version }.to_json)
       expect(described_class.latest_version).to eq version
@@ -26,7 +26,7 @@ describe ChatwootHub do
       end
     end
 
-    it 'returns nil when chatwoot hub is down' do
+    it 'returns nil when mondaychat hub is down' do
       allow(RestClient).to receive(:post).and_raise(ExceptionList::REST_CLIENT_EXCEPTIONS.sample)
       expect(described_class.latest_version).to be_nil
     end

@@ -12,7 +12,7 @@
 %>
 <script>
 
-window.chatwootSettings = {
+window.mondaychatSettings = {
   hideMessageBubble: false,
   // baseDomain: '.loca.lt',
   position: '<%= @widget_position %>',
@@ -32,17 +32,17 @@ window.chatwootSettings = {
   g.async = true;
   s.parentNode.insertBefore(g,s);
   g.onload=function(){
-    window.chatwootSDK.run({
+    window.mondaychatSDK.run({
       websiteToken: '<%= @web_widget.website_token %>',
       baseUrl: BASE_URL
     })
   }
 })(document,"script");
 
-window.addEventListener('chatwoot:ready', function() {
-  console.log('chatwoot:ready', window.$chatwoot);
+window.addEventListener('mondaychat:ready', function() {
+  console.log('mondaychat:ready', window.$mondaychat);
   if (window.location.search.includes('setUser')) {
-    window.$chatwoot.setUser('<%= user_id %>', {
+    window.$mondaychat.setUser('<%= user_id %>', {
       identifier_hash: '<%= user_hash %>',
       email: 'jane@example.com',
       name: 'Jane Doe',
@@ -51,12 +51,12 @@ window.addEventListener('chatwoot:ready', function() {
   }
 })
 
-window.addEventListener('chatwoot:error', function(e) {
-  console.log('chatwoot:error', e.detail)
+window.addEventListener('mondaychat:error', function(e) {
+  console.log('mondaychat:error', e.detail)
 })
 
 
-window.addEventListener('chatwoot:on-message', function(e) {
-  console.log('chatwoot:on-message', e.detail)
+window.addEventListener('mondaychat:on-message', function(e) {
+  console.log('mondaychat:on-message', e.detail)
 })
 </script>

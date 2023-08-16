@@ -1,6 +1,6 @@
-# give chatwoot user permission to start/stop/restart chatwoot systemd service
+# give mondaychat user permission to start/stop/restart mondaychat systemd service
 
-%chatwoot ALL=NOPASSWD: /bin/systemctl start chatwoot.target
-%chatwoot ALL=NOPASSWD: /bin/systemctl stop chatwoot.target
-%chatwoot ALL=NOPASSWD: /bin/systemctl restart chatwoot.target
-%chatwoot ALL=NOPASSWD: /usr/local/bin/cwctl
+%mondaychat ALL=NOPASSWD: /bin/systemctl start mondaychat.target
+%mondaychat ALL=NOPASSWD: /bin/systemctl stop mondaychat.target
+%mondaychat ALL=NOPASSWD: /bin/systemctl restart mondaychat.target
+%mondaychat ALL=NOPASSWD: /usr/local/bin/cwctl

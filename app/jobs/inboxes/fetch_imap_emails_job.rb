@@ -13,7 +13,7 @@ class Inboxes::FetchImapEmailsJob < ApplicationJob
   rescue EOFError, OpenSSL::SSL::SSLError, Net::IMAP::NoResponseError, Net::IMAP::BadResponseError => e
     Rails.logger.error e
   rescue StandardError => e
-    ChatwootExceptionTracker.new(e, account: channel.account).capture_exception
+    MondaychatExceptionTracker.new(e, account: channel.account).capture_exception
   end
 
   private
@@ -123,7 +123,7 @@ class Inboxes::FetchImapEmailsJob < ApplicationJob
   def process_mail(inbound_mail, channel)
     Imap::ImapMailbox.new.process(inbound_mail, channel)
   rescue StandardError => e
-    ChatwootExceptionTracker.new(e, account: channel.account).capture_exception
+    MondaychatExceptionTracker.new(e, account: channel.account).capture_exception
     Rails.logger.error("
       #{channel.provider} Email dropped: #{inbound_mail.from} and message_source_id: #{inbound_mail.message_id}")
   end

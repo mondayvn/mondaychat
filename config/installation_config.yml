@@ -1,7 +1,7 @@
 # if you dont specify locked attribute, the default value will be true
 # which means the particular config will be locked
 - name: INSTALLATION_NAME
-  value: 'Chatwoot'
+  value: 'Mondaychat'
 - name: LOGO_THUMBNAIL
   value: '/brand-assets/logo_thumbnail.svg'
 - name: LOGO
@@ -11,7 +11,7 @@
 - name: WIDGET_BRAND_URL
   value: 'https://www.monday.com.vn'
 - name: BRAND_NAME
-  value: 'Chatwoot'
+  value: 'Mondaychat'
 - name: TERMS_URL
   value: 'https://www.monday.com.vn/terms-of-service'
 - name: PRIVACY_URL
@@ -30,10 +30,10 @@
 - name: INSTALLATION_EVENTS_WEBHOOK_URL
   value:
   locked: false
-- name: CHATWOOT_INBOX_TOKEN
+- name: MONDAYCHAT_INBOX_TOKEN
   value:
   locked: false
-- name: CHATWOOT_INBOX_HMAC_KEY
+- name: MONDAYCHAT_INBOX_HMAC_KEY
   value:
   locked: false
 - name: API_CHANNEL_NAME
@@ -66,7 +66,7 @@
 - name: CSML_BOT_API_KEY
   value:
   locked: false
-- name: CHATWOOT_CLOUD_PLANS
+- name: MONDAYCHAT_CLOUD_PLANS
   value:
 - name: DEPLOYMENT_ENV
   value: self-hosted

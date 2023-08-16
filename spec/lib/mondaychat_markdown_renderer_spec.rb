@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ChatwootMarkdownRenderer do
+RSpec.describe MondaychatMarkdownRenderer do
   let(:markdown_content) { 'This is a *test* content with ^markdown^' }
   let(:doc) { instance_double(CommonMarker::Node) }
   let(:renderer) { described_class.new(markdown_content) }

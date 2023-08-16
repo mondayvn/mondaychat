@@ -70,7 +70,7 @@ export default {
   data() {
     return {
       showPopoutButton: false,
-      disableBranding: window.chatwootWebChannel.disableBranding || false,
+      disableBranding: window.mondaychatWebChannel.disableBranding || false,
     };
   },
   computed: {

@@ -7,7 +7,7 @@ class Telegram::IncomingMessageService
   pattr_initialize [:inbox!, :params!]
 
   def perform
-    # chatwoot doesn't support group conversations at the moment
+    # mondaychat doesn't support group conversations at the moment
     return unless private_message?
 
     set_contact

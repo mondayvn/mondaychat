@@ -9,9 +9,9 @@ describe('messageFormatterMixin', () => {
     };
     const wrapper = shallowMount(Component);
     const message =
-      '<b>Chatwoot is an opensource tool. https://www.monday.com.vn</b>';
+      '<b>Mondaychat is an opensource tool. https://www.monday.com.vn</b>';
     expect(wrapper.vm.getPlainText(message)).toMatch(
-      'Chatwoot is an opensource tool. https://www.monday.com.vn'
+      'Mondaychat is an opensource tool. https://www.monday.com.vn'
     );
   });
 });

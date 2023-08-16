@@ -27,8 +27,8 @@ module Redis::RedisKeys
   REAUTHORIZATION_REQUIRED =  'REAUTHORIZATION_REQUIRED:%<obj_type>s:%<obj_id>d'.freeze
 
   ## Internal Installation related keys
-  CHATWOOT_INSTALLATION_ONBOARDING = 'CHATWOOT_INSTALLATION_ONBOARDING'.freeze
-  LATEST_CHATWOOT_VERSION = 'LATEST_CHATWOOT_VERSION'.freeze
+  MONDAYCHAT_INSTALLATION_ONBOARDING = 'MONDAYCHAT_INSTALLATION_ONBOARDING'.freeze
+  LATEST_MONDAYCHAT_VERSION = 'LATEST_MONDAYCHAT_VERSION'.freeze
   # Check if a message create with same source-id is in progress?
   MESSAGE_SOURCE_KEY = 'MESSAGE_SOURCE_KEY::%<id>s'.freeze
   CUSTOM_FILTER_RECORDS_COUNT_KEY = 'CUSTOM_FILTER::%<account_id>d::%<user_id>d::%<filter_id>d'.freeze

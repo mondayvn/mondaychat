@@ -7,7 +7,7 @@ class Enterprise::MessageTemplates::ResponseBotService
       process_response(conversation.messages.last, response)
     end
   rescue StandardError => e
-    ChatwootExceptionTracker.new(e, account: conversation.account).capture_exception
+    MondaychatExceptionTracker.new(e, account: conversation.account).capture_exception
     true
   end
 

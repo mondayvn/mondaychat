@@ -20,8 +20,8 @@ class Integrations::Csml::ProcessorService < Integrations::BotProcessorService
 
   def client_params(session_id)
     {
-      bot_id: "chatwoot-bot-#{conversation.inbox.id}",
-      channel_id: "chatwoot-bot-inbox-#{conversation.inbox.id}",
+      bot_id: "mondaychat-bot-#{conversation.inbox.id}",
+      channel_id: "mondaychat-bot-inbox-#{conversation.inbox.id}",
       user_id: session_id
     }
   end
@@ -42,13 +42,13 @@ class Integrations::Csml::ProcessorService < Integrations::BotProcessorService
 
   def bot_payload
     {
-      id: "chatwoot-csml-bot-#{agent_bot.id}",
-      name: "chatwoot-csml-bot-#{agent_bot.id}",
-      default_flow: 'chatwoot_bot_flow',
+      id: "mondaychat-csml-bot-#{agent_bot.id}",
+      name: "mondaychat-csml-bot-#{agent_bot.id}",
+      default_flow: 'mondaychat_bot_flow',
       flows: [
         {
-          id: "chatwoot-csml-bot-flow-#{agent_bot.id}-inbox-#{conversation.inbox.id}",
-          name: 'chatwoot_bot_flow',
+          id: "mondaychat-csml-bot-flow-#{agent_bot.id}-inbox-#{conversation.inbox.id}",
+          name: 'mondaychat_bot_flow',
           content: agent_bot.bot_config['csml_content'],
           commands: []
         }

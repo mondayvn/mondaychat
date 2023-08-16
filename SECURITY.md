@@ -1,4 +1,4 @@
-Chatwoot is looking forward to working with security researchers worldwide to keep Chatwoot and our users safe. If you have found an issue in our systems/applications, please reach out to us.
+Mondaychat is looking forward to working with security researchers worldwide to keep Mondaychat and our users safe. If you have found an issue in our systems/applications, please reach out to us.
 
 ## Reporting a Vulnerability
 
@@ -18,7 +18,7 @@ Please try your best to describe a clear and realistic impact for your report, a
 
 
 ## Vulnerabilities we care about 🫣
-> Note: Please do not perform testing against Chatwoot production services. Use a `self-hosted instance` to perform tests.
+> Note: Please do not perform testing against Mondaychat production services. Use a `self-hosted instance` to perform tests.
 - Remote command execution
 - SQL Injection
 - Authentication bypass
@@ -48,9 +48,9 @@ We consider the following out of scope, though there may be exceptions.
 - Brute force attacks
 - DNSSEC
 
-If you are unsure about the scope, please create a [report](https://huntr.dev/repos/chatwoot/chatwoot/).
+If you are unsure about the scope, please create a [report](https://huntr.dev/repos/mondaychat/mondaychat/).
 
 
 ## Thanks
 
-Thank you for keeping Chatwoot and our users safe. 🙇
+Thank you for keeping Mondaychat and our users safe. 🙇

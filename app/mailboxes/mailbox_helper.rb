@@ -86,9 +86,9 @@ module MailboxHelper
     @contact = @contact_inbox.contact
   end
 
-  def notification_email_from_chatwoot?
+  def notification_email_from_mondaychat?
     # notification emails are send via mailer sender email address. so it should match
-    @processed_mail.original_sender == Mail::Address.new(ENV.fetch('MAILER_SENDER_EMAIL', 'Chatwoot <accounts@monday.com.vn>')).address
+    @processed_mail.original_sender == Mail::Address.new(ENV.fetch('MAILER_SENDER_EMAIL', 'Mondaychat <accounts@monday.com.vn>')).address
   end
 
   def mail_content

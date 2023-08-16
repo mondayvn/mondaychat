@@ -168,7 +168,7 @@ export default {
       return '';
     },
     showGoogleOAuth() {
-      return Boolean(window.chatwootConfig.googleOAuthClientId);
+      return Boolean(window.mondaychatConfig.googleOAuthClientId);
     },
   },
   methods: {

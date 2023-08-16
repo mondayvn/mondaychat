@@ -11,7 +11,7 @@ describe Enterprise::Billing::CreateStripeCustomerService do
     before do
       create(
         :installation_config,
-        { name: 'CHATWOOT_CLOUD_PLANS', value: [
+        { name: 'MONDAYCHAT_CLOUD_PLANS', value: [
           { 'name' => 'A Plan Name', 'product_id' => ['prod_hacker_random'], 'price_ids' => ['price_hacker_random'] }
         ] }
       )

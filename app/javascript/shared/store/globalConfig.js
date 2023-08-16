@@ -4,7 +4,7 @@ const {
   APP_VERSION: appVersion,
   AZURE_APP_ID: azureAppId,
   BRAND_NAME: brandName,
-  CHATWOOT_INBOX_TOKEN: chatwootInboxToken,
+  MONDAYCHAT_INBOX_TOKEN: mondaychatInboxToken,
   CSML_EDITOR_HOST: csmlEditorHost,
   CREATE_NEW_ACCOUNT_FROM_DASHBOARD: createNewAccountFromDashboard,
   DIRECT_UPLOADS_ENABLED: directUploadsEnabled,
@@ -28,7 +28,7 @@ const state = {
   appVersion,
   azureAppId,
   brandName,
-  chatwootInboxToken,
+  mondaychatInboxToken,
   csmlEditorHost,
   deploymentEnv,
   createNewAccountFromDashboard,
@@ -48,8 +48,8 @@ const state = {
 
 export const getters = {
   get: $state => $state,
-  isOnChatwootCloud: $state => $state.deploymentEnv === 'cloud',
-  isACustomBrandedInstance: $state => $state.installationName !== 'Chatwoot',
+  isOnMondaychatCloud: $state => $state.deploymentEnv === 'cloud',
+  isACustomBrandedInstance: $state => $state.installationName !== 'Mondaychat',
 };
 
 export const actions = {};

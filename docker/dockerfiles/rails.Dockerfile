@@ -1,4 +1,4 @@
-FROM chatwoot:development
+FROM mondaychat:development
 
 RUN chmod +x docker/entrypoints/rails.sh
 

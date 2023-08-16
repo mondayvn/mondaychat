@@ -22,7 +22,7 @@
       :custom-views="customViews"
       :menu-config="activeSecondaryMenu"
       :current-role="currentRole"
-      :is-on-chatwoot-cloud="isOnChatwootCloud"
+      :is-on-mondaychat-cloud="isOnMondaychatCloud"
       @add-label="showAddLabelPopup"
       @toggle-accounts="toggleAccountModal"
     />
@@ -79,7 +79,7 @@ export default {
       inboxes: 'inboxes/getInboxes',
       isACustomBrandedInstance: 'globalConfig/isACustomBrandedInstance',
       isFeatureEnabledonAccount: 'accounts/isFeatureEnabledonAccount',
-      isOnChatwootCloud: 'globalConfig/isOnChatwootCloud',
+      isOnMondaychatCloud: 'globalConfig/isOnMondaychatCloud',
       labels: 'labels/getLabelsOnSidebar',
       teams: 'teams/getMyTeams',
     }),
@@ -199,7 +199,7 @@ export default {
       return this.$route.name === routeName;
     },
     toggleSupportChatWindow() {
-      window.$chatwoot.toggle();
+      window.$mondaychat.toggle();
     },
     toggleAccountModal() {
       this.$emit('toggle-account-modal');

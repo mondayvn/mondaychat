@@ -7,7 +7,7 @@ describe CsmlEngine do
 
   context 'when CSML_BOT_HOST & CSML_BOT_API_KEY is present' do
     before do
-      create(:installation_config, { name: 'CSML_BOT_HOST', value: 'https://csml.chatwoot.dev' })
+      create(:installation_config, { name: 'CSML_BOT_HOST', value: 'https://csml.mondaychat.dev' })
       create(:installation_config, { name: 'CSML_BOT_API_KEY', value: 'random_api_key' })
     end
 
@@ -21,7 +21,7 @@ describe CsmlEngine do
 
         response = described_class.new.status
 
-        expect(HTTParty).to have_received(:get).with('https://csml.chatwoot.dev/status')
+        expect(HTTParty).to have_received(:get).with('https://csml.mondaychat.dev/status')
         expect(csml_request).to have_received(:success?)
         expect(csml_request).to have_received(:parsed_response)
         expect(response).to eq({ 'engine_version': '1.11.1' })
@@ -35,7 +35,7 @@ describe CsmlEngine do
 
         response = described_class.new.status
 
-        expect(HTTParty).to have_received(:get).with('https://csml.chatwoot.dev/status')
+        expect(HTTParty).to have_received(:get).with('https://csml.mondaychat.dev/status')
         expect(csml_request).to have_received(:success?)
         expect(response).to eq({ error: { 'error': true }, status: 401 })
       end
@@ -62,7 +62,7 @@ describe CsmlEngine do
         }
         expect(HTTParty).to have_received(:post)
           .with(
-            'https://csml.chatwoot.dev/run', {
+            'https://csml.mondaychat.dev/run', {
               body: payload.to_json,
               headers: { 'X-Api-Key' => 'random_api_key', 'Content-Type' => 'application/json' }
             }
@@ -85,7 +85,7 @@ describe CsmlEngine do
 
         expect(HTTParty).to have_received(:post)
           .with(
-            'https://csml.chatwoot.dev/validate', {
+            'https://csml.mondaychat.dev/validate', {
               body: payload.to_json,
               headers: { 'X-Api-Key' => 'random_api_key', 'Content-Type' => 'application/json' }
             }

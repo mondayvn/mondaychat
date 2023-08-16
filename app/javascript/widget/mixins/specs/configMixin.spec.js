@@ -19,7 +19,7 @@ const preChatFields = [
     enabled: true,
   },
 ];
-global.chatwootWebChannel = {
+global.mondaychatWebChannel = {
   avatarUrl: 'https://test.url',
   hasAConnectedAgentBot: 'AgentBot',
   enabledFeatures: [

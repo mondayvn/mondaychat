@@ -7,7 +7,7 @@ class Enterprise::SentimentAnalysisJob < ApplicationJob
     save_message_sentiment(message)
   rescue StandardError => e
     Rails.logger.error("Sentiment Analysis Error for message #{message.id}: #{e}")
-    ChatwootExceptionTracker.new(e, account: message.account).capture_exception
+    MondaychatExceptionTracker.new(e, account: message.account).capture_exception
   end
 
   def save_message_sentiment(message)

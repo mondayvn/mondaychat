@@ -1,5 +1,5 @@
 <% if @message.content %>
-  <%= ChatwootMarkdownRenderer.new(@message.content).render_message %>
+  <%= MondaychatMarkdownRenderer.new(@message.content).render_message %>
 <% end %>
 <% if @message.attachments %>
   <% @message.attachments.each do |attachment| %>
