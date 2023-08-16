@@ -26,11 +26,6 @@ jobs:
       - name: yarn
         run: yarn install
 
-      - name: Strip enterprise code
-        run: |
-          rm -rf enterprise
-          rm -rf spec/enterprise
-
       - name: Run asset compile
         run: bundle exec rake assets:precompile
 

@@ -19,7 +19,7 @@ concurrency:
 jobs:
   action:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'mondaychat/mondaychat' }}
+    if: ${{ github.repository == 'mondayvn/mondaychat' }}
     steps:
       - uses: dessant/lock-threads@v3
         with: 

@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="https://s3.us-west-2.amazonaws.com/gh-assets.monday.com.vn/brand.svg" alt="Woot-logo" width="240" />
+  <img src="https://raw.githubusercontent.com/mondayvn/mondaychat/8d72b90f72f7164c2bf3a61e90062affea5779c5/public/brand-assets/logo.svg" alt="Woot-logo" width="240" />
 
   <p align="center">Customer engagement suite, an open-source alternative to Intercom, Zendesk, Salesforce Service Cloud etc.</p>
 </p>
 
 <p align="center">
-  <a href="https://heroku.com/deploy?template=https://github.com/mondaychat/mondaychat/tree/master" alt="Deploy to Heroku">
+  <a href="https://heroku.com/deploy?template=https://github.com/mondayvn/mondaychat/tree/master" alt="Deploy to Heroku">
      <img width="150" alt="Deploy" src="https://www.herokucdn.com/deploy/button.svg"/>
   </a>
   <a href="https://marketplace.digitalocean.com/apps/mondaychat?refcode=f2238426a2a8" alt="Deploy to DigitalOcean">
@@ -16,20 +16,20 @@
 ___
 
 <p align="center">
-  <a href="https://codeclimate.com/github/mondaychat/mondaychat/maintainability"><img src="https://api.codeclimate.com/v1/badges/e6e3f66332c91e5a4c0c/maintainability" alt="Maintainability"></a>
+  <a href="https://codeclimate.com/github/mondaydotvn/mondaychat/maintainability"><img src="https://api.codeclimate.com/v1/badges/e6e3f66332c91e5a4c0c/maintainability" alt="Maintainability"></a>
   <img src="https://img.shields.io/circleci/build/github/mondaychat/mondaychat" alt="CircleCI Badge">
-    <a href="https://hub.docker.com/r/mondaychat/mondaychat/"><img src="https://img.shields.io/docker/pulls/mondaychat/mondaychat" alt="Docker Pull Badge"></a>
-  <a href="https://hub.docker.com/r/mondaychat/mondaychat/"><img src="https://img.shields.io/docker/cloud/build/mondaychat/mondaychat" alt="Docker Build Badge"></a>
-  <img src="https://img.shields.io/github/commit-activity/m/mondaychat/mondaychat" alt="Commits-per-month">
-  <a title="Crowdin" target="_self" href="https://mondaychat.crowdin.com/mondaychat"><img src="https://badges.crowdin.net/e/37ced7eba411064bd792feb3b7a28b16/localized.svg"></a>
+    <a href="https://hub.docker.com/r/mondaydotvn/mondaychat/"><img src="https://img.shields.io/docker/pulls/mondaydotvn/mondaychat" alt="Docker Pull Badge"></a>
+  <a href="https://hub.docker.com/r/mondaydotvn/mondaychat/"><img src="https://img.shields.io/docker/cloud/build/mondaydotvn/mondaychat" alt="Docker Build Badge"></a>
+  <img src="https://img.shields.io/github/commit-activity/m/mondaydotvn/mondaychat" alt="Commits-per-month">
+  <a title="Crowdin" target="_self" href="https://mondaydotvn.crowdin.com/mondaychat"><img src="https://badges.crowdin.net/e/37ced7eba411064bd792feb3b7a28b16/localized.svg"></a>
   <a href="https://discord.gg/cJXdrwS"><img src="https://img.shields.io/discord/647412545203994635" alt="Discord"></a>
   <a href="https://huntr.dev/bounties/disclose"><img src="https://cdn.huntr.dev/huntr_security_badge_mono.svg" alt="Huntr"></a>
   <a href="https://status.monday.com.vn"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmondaychat%2Fstatus%2Fmaster%2Fapi%2Fmondaychat%2Fuptime.json" alt="uptime"></a>
   <a href="https://status.monday.com.vn"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmondaychat%2Fstatus%2Fmaster%2Fapi%2Fmondaychat%2Fresponse-time.json" alt="response time"></a>
-  <a href="https://artifacthub.io/packages/helm/mondaychat/mondaychat"><img src="https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/artifact-hub" alt="Artifact HUB"></a>
+  <a href="https://artifacthub.io/packages/helm/mondaydotvn/mondaychat"><img src="https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/artifact-hub" alt="Artifact HUB"></a>
 </p>
 
-<img src="https://mondaychat-public-assets.s3.amazonaws.com/github/screenshot.png" width="100%" alt="Chat dashboard"/>
+<img src="https://chatwoot-public-assets.s3.amazonaws.com/github/screenshot.png" width="100%" alt="Chat dashboard"/>
 
 
 
