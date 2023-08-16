@@ -334,7 +334,7 @@ function setup_mondaychat() {
   rvm install "ruby-3.2.2"
   rvm use 3.2.2 --default
 
-  git clone https://github.com/mondaychat/mondaychat.git
+  git clone https://github.com/mondayvn/mondaychat.git
   cd mondaychat
   git checkout "$BRANCH"
   bundle
@@ -410,7 +410,7 @@ function setup_ssl() {
     echo "debug: letsencrypt email: $le_email"
   fi
   curl https://ssl-config.mozilla.org/ffdhe4096.txt >> /etc/ssl/dhparam
-  wget https://raw.githubusercontent.com/mondaychat/mondaychat/develop/deployment/nginx_mondaychat.conf
+  wget https://raw.githubusercontent.com/mondayvn/mondaychat/develop/deployment/nginx_mondaychat.conf
   cp nginx_mondaychat.conf /etc/nginx/sites-available/nginx_mondaychat.conf
   certbot certonly --non-interactive --agree-tos --nginx -m "$le_email" -d "$domain_name"
   sed -i "s/mondaychat.domain.com/$domain_name/g" /etc/nginx/sites-available/nginx_mondaychat.conf
@@ -642,7 +642,7 @@ Miscellaneous:
 Exit status:
 Returns 0 if successful; non-zero otherwise.
 
-Report bugs at https://github.com/mondaychat/mondaychat/issues
+Report bugs at https://github.com/mondayvn/mondaychat/issues
 Get help, https://monday.com.vn/community?utm_source=cwctl
 
 EOF
